@@ -1,8 +1,16 @@
-body {
-    height: 100vh;
+html{
+   height:100vh;
+   width:100vw;
+}
+
+body{
+    height: 100%;
+    width:100%;
+    overflow: hidden;
     background-image: url(https://wallpapers.com/images/featured/1920-x-1080-night-city-y13hx1qucv0ztepv.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position:center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,35 +35,41 @@ h2 {
     font-size: 1.1rem;
     padding: 0 0 15px 0;
     border-bottom: 2px solid black;
+    cursor: pointer;
+    display:flex;
+    justify-content: space-between;
 }
 
 .question::after {
     content: "+";
+    font-size: 1.4rem;
+}
+
+.answer {
+    overflow: hidden;
+    height: 0;
+    transition: all 0.5s ease-in;
+}
+
+.question-container.active .answer {
+    height: 40px;
+}
+
+.question-container.active .question {
+    font-size: 1rem;
+    transition: all 0.5s ease-in;
+}
+
+.question-container.active .question::after {
+    content: "-";
     font-size:1.4rem;
-    position:absolute;
-    left:1150px;
+    transition: all 0.5s ease-in;
 }
 
-.answer{
-  overflow: hidden;
-  height:0;
-  transition:all 0.5s ease-in;
+@media screen and (max-width:430px){
+    .container{
+        max-width:83%;
+    }
 }
 
-.question-container.active .answer{
-    height:40px;
-}
 
-.question-container.active .question{
-    font-size:1rem;
-    transition:all 0.5s ease-in;
- }
-
-.question-container .active .question::after{
-   content:"-";
-   transition:all 0.5s ease-in;
-}
-
-@media screen and (max-width:){
-
-}
