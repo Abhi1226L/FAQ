@@ -35,7 +35,7 @@ This project creates a Frequently Asked Questions (FAQ) page with expandable and
 
 ## What I learned
 
- I learnt using of CSS properties like transition,animation and connecting that animation with javascript while the button is clicked
+I learned how to use CSS properties such as `transition` and `animation`, and how to connect these animations with JavaScript to trigger them when a button is clicked.
 
  ## Author
 
